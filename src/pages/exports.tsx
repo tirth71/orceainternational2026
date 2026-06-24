@@ -4,19 +4,6 @@ import { Section, SectionHeading } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Wheat, Apple, Leaf, Sprout, Package, Droplets, ShieldCheck, Award, Globe2, CheckCircle2 } from "lucide-react";
 
-// export const Route = createFileRoute("/exports")({
-//   head: () => ({
-//     meta: [
-//       { title: "ORCEA Exports — Connecting Global Markets with Premium Products" },
-//       { name: "description", content: "Sourcing and exporting premium agricultural and industrial products — rice, wheat, pulses, spices, fresh produce and dehydrated goods." },
-//       { property: "og:title", content: "ORCEA Export Import Division" },
-//       { property: "og:description", content: "Connecting global markets with premium quality products." },
-//       { property: "og:url", content: "https://orcea-global-hub.lovable.app/exports" },
-//     ],
-//     links: [{ rel: "canonical", href: "https://orcea-global-hub.lovable.app/exports" }],
-//   }),
-//   component: Exports,
-// });
 
 const productCategories = [
   { icon: Wheat, title: "Agricultural Products", items: ["Rice", "Wheat", "Maize", "Barley"] },
