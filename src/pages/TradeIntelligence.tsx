@@ -2,13 +2,21 @@ import { Link } from "react-router-dom";
 import { DivisionLayout } from "@/components/DivisionLayout";
 import { Section, SectionHeading } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
-import { motion } from "framer-motion";
-import {
-  BarChart3, Users, LineChart, FileText, Search, Globe2,
-  Target, TrendingUp, CheckCircle2, Quote, ChevronRight,
-  Database, ShieldCheck, Zap, Award, ArrowRight, MapPin,
-  Package, Building2, Layers, Star,
-} from "lucide-react";
+import { BarChart3, Users, LineChart, FileText, Search, Globe2, Target, TrendingUp, CheckCircle2, Quote } from "lucide-react";
+
+// export const Route = createFileRoute("/trade-intelligence")({
+//   head: () => ({
+//     meta: [
+//       { title: "ORCEA Trade Intelligence — Global Trade Data & Research" },
+//       { name: "description", content: "Data-driven insights for smarter global trade decisions — shipment data, verified buyers, market research and trade reports." },
+//       { property: "og:title", content: "ORCEA Trade Intelligence" },
+//       { property: "og:description", content: "Data-driven insights for smarter global trade decisions." },
+//       { property: "og:url", content: "https://orcea-global-hub.lovable.app/trade-intelligence" },
+//     ],
+//     links: [{ rel: "canonical", href: "https://orcea-global-hub.lovable.app/trade-intelligence" }],
+//   }),
+//   component: TradeIntel,
+// });
 
 const serviceGroups = [
   {
@@ -181,7 +189,8 @@ const stats = [
   { value: "500+",  label: "Reports Delivered"        },
 ];
 
-export default function TradeIntel() {
+
+export default function TradeIntelligence() {
   return (
     <DivisionLayout
       slug="trade-intelligence"
