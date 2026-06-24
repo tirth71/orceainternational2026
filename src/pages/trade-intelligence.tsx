@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { DivisionLayout } from "@/components/DivisionLayout";
 import { Section, SectionHeading } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
