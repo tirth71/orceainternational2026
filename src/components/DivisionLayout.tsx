@@ -6,7 +6,7 @@ import { PageHero, Section, SectionHeading } from "./Section";
 import { divisions } from "../data/divisions";
 
 
-// Second Demo text
+// Demo text
 
 
 export function DivisionLayout({
