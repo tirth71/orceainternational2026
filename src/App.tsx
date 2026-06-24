@@ -15,10 +15,12 @@ import Consulting from "./pages/consulting";
 import Digital from "./pages/digital";
 import Logistics from "./pages/logistics";
 import Exports from "./pages/exports";
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Header />
 
       <Routes>
