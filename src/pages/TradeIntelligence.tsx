@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { DivisionLayout } from "@/components/DivisionLayout";
 import { Section, SectionHeading } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
-import { BarChart3, Users, LineChart, FileText, Search, Globe2, Target, TrendingUp, CheckCircle2, Quote } from "lucide-react";
+import { BarChart3, Users, LineChart, FileText, Search, Globe2, Target, TrendingUp, CheckCircle2, Quote, Database, Package, MapPin, Award, Building2, Layers, ShieldCheck, Star, Zap } from "lucide-react";
+import { motion } from "framer-motion";
 
 // export const Route = createFileRoute("/trade-intelligence")({
 //   head: () => ({
