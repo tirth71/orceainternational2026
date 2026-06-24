@@ -36,7 +36,7 @@ function App() {
         <Route path="/digital" element={<Digital />} />
         <Route path="/logistics" element={<Logistics />} />
         <Route path="/exports" element={<Exports />} />
-        <Route path="/tradeintelligence" element={<TradeIntelligence />} />
+        <Route path="/trade-intelligence" element={<TradeIntelligence />} />
       </Routes>
 
       <Footer />
