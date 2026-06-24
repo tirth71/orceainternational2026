@@ -368,7 +368,7 @@ export default function Academy() {
           className="absolute inset-0 -z-20 h-full w-full object-cover"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/95 via-primary/85 to-primary/70" />
-        <div className="container-x relative mx-auto max-w-7xl py-24 md:py-32">
+        <div className="container-x relative mx-auto max-w-7xl py-24 md:py-18">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             ORCEA International Academy

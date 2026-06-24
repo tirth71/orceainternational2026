@@ -123,3 +123,13 @@
 }
 @utility animate-fade-up { animation: fade-up 0.7s ease-out both; }
 @utility animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+#root {
+  overflow-x: hidden;
+}

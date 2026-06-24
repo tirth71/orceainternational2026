@@ -20,20 +20,6 @@ import spiceBoard from "../assets/Spices_Board_of_India_Logo.png";
 const iconMap = { GraduationCap, BarChart3, Briefcase, Ship, Megaphone, Wheat };
 const certificates = [iso, fssai, apeda, usda, msme, spiceBoard];
 
-// export const Route = createFileRoute("/")({
-//   head: () => ({
-//     meta: [
-//       { title: "ORCEA Internat — One Group. Multiple Business Solutions." },
-//       { name: "description", content: "World-class services across international trade, business consulting, logistics, professional education, digital marketing and global exports." },
-//       { property: "og:title", content: "ORCEA Group — One Group. Multiple Business Solutions." },
-//       { property: "og:description", content: "World-class services across international trade, business consulting, logistics, professional education, digital marketing and global exports." },
-//       { property: "og:url", content: "/" },
-//     ],
-//     links: [{ rel: "canonical", href: "/" }],
-//   }),
-//   component: Home,
-// });
-
 export default function Home() {
   return (
     <>
@@ -64,7 +50,7 @@ function Hero() {
   <div className="absolute inset-0 bg-black/75" />
   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
-  <div className="container-x relative z-10 mx-auto max-w-7xl px-6 py-28 md:py-36">
+  <div className="container-x relative z-10 mx-auto max-w-7xl px-6 py-28 md:py-20">
     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
       {/* LEFT: Text Content */}
@@ -118,7 +104,7 @@ function Hero() {
           </Link>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+            className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20 hover:scale-[1.03] active:scale-100"
           >
             Book Consultation
           </Link>
@@ -155,11 +141,16 @@ function Hero() {
         ].map(({ icon: Icon, title, desc, delay }) => (
           <motion.div
             key={title}
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay }}
-            whileHover={{ x: 6, backgroundColor: "rgba(255,255,255,0.12)" }}
-            className="flex items-start gap-4 rounded-2xl border border-white/15 bg-white/8 backdrop-blur-md px-5 py-4 transition-all duration-300 cursor-default"
+            whileHover={{
+              x: 12,
+              scale: 1.03,
+              backgroundColor: "rgba(255,255,255,0.15)",
+              boxShadow: "0 10px 30px rgba(255,255,255,0.15)",
+              borderColor: "rgba(255,255,255,0.4)",
+            }}
+            className="flex items-start gap-4 rounded-2xl border border-white/15 bg-white/8 backdrop-blur-md px-5 py-4"
           >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-accent/20">
               <Icon className="h-5 w-5 text-accent" />
@@ -212,6 +203,7 @@ function AboutBlock() {
     </Section>
   );
 }
+
 function DivisionsGrid() {
   return (
     <Section surface>
@@ -230,7 +222,7 @@ function DivisionsGrid() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
+              transition={{ duration: 0.2, delay: 0.07 }}
               whileHover={{ y: -6 }}
             >
               <Link
@@ -318,7 +310,7 @@ function WhyChoose() {
 
 function Stats() {
   return (
-    <section className="relative overflow-hidden gradient-hero py-20 text-primary-foreground md:py-24">
+    <section className="relative overflow-hidden gradient-hero py-20 text-primary-foreground md:py-20">
       <div className="container-x mx-auto max-w-7xl">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-4">
           {stats.map((s, i) => (
@@ -549,7 +541,7 @@ function Course() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.15, duration: 0.5 }}
+              // transition={{ delay: idx * 0.15, duration: 0.5 }}
               className={`relative rounded-3xl border-2 ${plan.color} bg-background flex flex-col overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300`}
             >
               {/* Badge */}
