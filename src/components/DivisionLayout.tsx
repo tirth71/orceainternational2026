@@ -5,6 +5,10 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 import { PageHero, Section, SectionHeading } from "./Section";
 import { divisions } from "../data/divisions";
 
+
+// Demo text
+
+
 export function DivisionLayout({
   slug,
   heroTitle,
