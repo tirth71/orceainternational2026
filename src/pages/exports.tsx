@@ -43,14 +43,14 @@ const process = [
   { title: "Delivery", desc: "Door delivery with full reconciliation." },
 ];
 
-export default function Exports() {
-  return (
-    <DivisionLayout
-      slug="exports"
-      heroTitle="Connecting global markets with premium quality products."
-      heroDescription="ORCEA Export Import Division specializes in sourcing, exporting and supplying high-quality agricultural and industrial products to international buyers across multiple countries."
-    >
-      <Section>
+// export default function Exports() {
+//   return (
+    // <DivisionLayout
+    //   slug="exports"
+    //   heroTitle="Connecting global markets with premium quality products."
+    //   heroDescription="ORCEA Export Import Division specializes in sourcing, exporting and supplying high-quality agricultural and industrial products to international buyers across multiple countries."
+    // >
+      {/* <Section>
         <SectionHeading eyebrow="Product Categories" title="What we export." center />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {productCategories.map((c) => (
@@ -150,7 +150,22 @@ export default function Exports() {
             <InquiryForm subject="Export Product Inquiry" fields={["name", "company", "email", "phone", "message"]} />
           </div>
         </div>
-      </Section>
-    </DivisionLayout>
+      </Section> */}
+     // <h1 className="text-3xl font-bold text-center text-primary">Exports Division Page Under Construction</h1>
+    // </DivisionLayout>
+//   );
+// }
+export default function Exports() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="text-center">
+        <h1 className="text-5xl font-bold text-primary">
+          Page Under Construction
+        </h1>
+        <p className="mt-4 text-muted-foreground">
+          We're working hard to bring this page online soon.
+        </p>
+      </div>
+    </div>
   );
 }

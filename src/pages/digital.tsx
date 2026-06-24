@@ -34,9 +34,27 @@ const portfolio = [
 ];
 
 const cases = [
-  { client: "Spice Exporter", result: "Built export-ready website + SEO — 60+ inbound buyer inquiries/month." },
-  { client: "Engineering OEM", result: "Google Ads + LinkedIn funnels delivered 4.8x pipeline ROI in 6 months." },
-  { client: "D2C Brand", result: "Meta Ads scaled from ₹3L to ₹40L/month at 5.4x ROAS." },
+  {
+    client: "Global Spice Exporter",
+    growth: "+320%",
+    metric: "Organic Traffic",
+    result:
+      "SEO and content strategy generated consistent buyer inquiries from USA, UAE and Europe."
+  },
+  {
+    client: "Industrial Manufacturer",
+    growth: "4.8X",
+    metric: "Pipeline ROI",
+    result:
+      "Google Ads and LinkedIn campaigns delivered qualified B2B leads and increased sales opportunities."
+  },
+  {
+    client: "D2C Consumer Brand",
+    growth: "5.4X",
+    metric: "ROAS",
+    result:
+      "Meta Ads scaling strategy increased monthly revenue while reducing acquisition costs."
+  },
 ];
 
 const process = [
@@ -65,26 +83,67 @@ export default function Digital() {
       heroTitle="Driving business growth through digital excellence."
       heroDescription="ORCEA Digital Marketing helps businesses build their online presence, generate quality leads and achieve measurable growth through data-driven marketing strategies."
     >
-      <Section>
-        <SectionHeading eyebrow="Services" title="Full-funnel digital growth." center />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {serviceGroups.map((g) => (
-            <div key={g.title} className="rounded-2xl border border-border bg-card p-7 shadow-soft transition hover:shadow-elegant">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-accent/15"><g.icon className="h-6 w-6 text-accent-foreground" /></div>
-              <h3 className="mt-5 font-display text-xl font-bold text-primary">{g.title}</h3>
-              <ul className="mt-4 grid gap-2">
-                {g.items.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-accent shrink-0" /> {it}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Section>
+     <Section>
+  <SectionHeading
+    eyebrow="Services"
+    title="Full-Funnel Digital Growth"
+    center
+  />
 
-      <Section surface>
+  <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {serviceGroups.map((g, index) => (
+      <div
+        key={g.title}
+        className="group relative overflow-hidden rounded-[24px] border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#D4AF37] hover:shadow-xl"
+      >
+        {/* Number */}
+        <div className="absolute right-6 top-6 text-5xl font-black text-slate-100">
+          {String(index + 1).padStart(2, "0")}
+        </div>
+
+        {/* Icon */}
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F8F4EA] transition-all duration-300 group-hover:bg-[#D4AF37]">
+          <g.icon className="h-8 w-8 text-[#0A2C5A]" />
+        </div>
+
+        {/* Title */}
+        <h3 className="mt-5 text-2xl font-bold leading-tight text-[#0A2C5A]">
+          {g.title}
+        </h3>
+
+        {/* Description */}
+        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+          Strategic digital marketing solutions designed to increase
+          visibility, generate quality leads and accelerate business growth.
+        </p>
+
+        {/* Services List */}
+        <ul className="mt-5 space-y-3">
+          {g.items.map((item) => (
+            <li
+              key={item}
+              className="flex items-center gap-3 text-sm text-slate-700"
+            >
+              <div className="flex h-5 w-5 items-center justify-center rounded-full border border-[#D4AF37]">
+                <CheckCircle2 className="h-3 w-3 text-[#D4AF37]" />
+              </div>
+
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Divider */}
+        <div className="mt-6 border-t border-slate-200 pt-5">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0057D9]">
+            {g.items.length} Services
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
+      {/* <Section surface>
         <SectionHeading eyebrow="Portfolio" title="Real results across industries." center />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {portfolio.map((p) => (
@@ -95,20 +154,54 @@ export default function Digital() {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
-      <Section>
-        <SectionHeading eyebrow="Case Studies" title="From audit to scale." center />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {cases.map((c) => (
-            <div key={c.client} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <Target className="h-6 w-6 text-accent-foreground" />
-              <h3 className="mt-3 font-display text-base font-bold text-primary">{c.client}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{c.result}</p>
-            </div>
-          ))}
+     <Section className="bg-slate-50">
+  <SectionHeading
+    eyebrow="Success Stories"
+    title="Real Results. Measurable Growth."
+    center
+  />
+
+  <div className="mt-14 grid gap-8 md:grid-cols-3">
+    {cases.map((c) => (
+      <div
+        key={c.client}
+        className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      >
+        {/* Top Metric */}
+        <div className="mb-6">
+          <div className="text-5xl font-black text-[#D4AF37]">
+            {c.growth}
+          </div>
+
+          <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-slate-500">
+            {c.metric}
+          </div>
         </div>
-      </Section>
+
+        {/* Client */}
+        <h3 className="text-xl font-bold text-[#0A2C5A]">
+          {c.client}
+        </h3>
+
+        {/* Result */}
+        <p className="mt-4 text-sm leading-relaxed text-slate-600">
+          {c.result}
+        </p>
+
+        {/* Bottom */}
+        <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#0057D9]">
+          <TrendingUp className="h-4 w-4" />
+          Growth Achieved
+        </div>
+
+        {/* Accent Line */}
+        <div className="mt-6 h-1 w-16 rounded-full bg-[#D4AF37] transition-all duration-300 group-hover:w-full" />
+      </div>
+    ))}
+  </div>
+</Section>
 
       <Section surface>
         <SectionHeading eyebrow="Process" title="A repeatable growth engine." center />
@@ -150,7 +243,7 @@ export default function Digital() {
           ))}
         </div>
       </Section>
-
+{/* 
       <Section>
         <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 shadow-soft md:p-12">
           <SectionHeading eyebrow="Contact Form" title="Start a project." center />
@@ -158,7 +251,7 @@ export default function Digital() {
             <InquiryForm subject="Digital Marketing Inquiry" fields={["name", "company", "email", "phone", "message"]} />
           </div>
         </div>
-      </Section>
+      </Section> */}
     </DivisionLayout>
   );
 }
