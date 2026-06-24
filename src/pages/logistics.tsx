@@ -2,7 +2,7 @@
 import { DivisionLayout } from "@/components/DivisionLayout";
 import { Section, SectionHeading } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
-import { Ship, Plane, FileCheck2, Warehouse, Network, CheckCircle2, Quote, Globe2 } from "lucide-react";
+import { Ship, Plane, FileCheck2, Warehouse, Network, CheckCircle2, Quote, Globe2, Truck, Building2, Factory, FlaskConical, Shirt, ShoppingBag, Sprout, Wheat } from "lucide-react";
 
 // export const Route = createFileRoute("/logistics")({
 //   head: () => ({
@@ -19,15 +19,76 @@ import { Ship, Plane, FileCheck2, Warehouse, Network, CheckCircle2, Quote, Globe
 // });
 
 const serviceGroups = [
-  { icon: Ship, title: "Ocean Freight", items: ["FCL Shipments", "LCL Shipments", "Port-to-Port Services", "Door-to-Door Solutions"] },
-  { icon: Plane, title: "Air Freight", items: ["Express Shipping", "Cargo Handling", "Time-Sensitive Deliveries"] },
-  { icon: FileCheck2, title: "Customs Clearance", items: ["Documentation Management", "Import Clearance", "Export Clearance", "Regulatory Compliance"] },
-  { icon: Warehouse, title: "Warehousing", items: ["Inventory Management", "Distribution Services", "Storage Solutions"] },
-  { icon: Network, title: "Supply Chain Solutions", items: ["Procurement Support", "Cargo Consolidation", "End-to-End Logistics Planning"] },
+  {
+    icon: Ship,
+    title: "Ocean Freight",
+    items: [
+      "FCL Shipments",
+      "LCL Shipments",
+      "Port-to-Port Services",
+      "Door-to-Door Solutions",
+    ],
+  },
+  {
+    icon: Plane,
+    title: "Air Freight",
+    items: [
+      "Express Shipping",
+      "Cargo Handling",
+      "Time-Sensitive Deliveries",
+      "Global Air Network",
+    ],
+  },
+  {
+    icon: FileCheck2,
+    title: "Customs Clearance",
+    items: [
+      "Documentation Management",
+      "Import Clearance",
+      "Export Clearance",
+      "Regulatory Compliance",
+    ],
+  },
+  {
+    icon: Warehouse,
+    title: "Warehousing",
+    items: [
+      "Inventory Management",
+      "Storage Solutions",
+      "Distribution Services",
+      "Order Fulfillment",
+    ],
+  },
+  {
+    icon: Network,
+    title: "Supply Chain Solutions",
+    items: [
+      "Procurement Support",
+      "Cargo Consolidation",
+      "Logistics Planning",
+      "Vendor Coordination",
+    ],
+  },
+  {
+    icon: Truck,
+    title: "Land Transportation",
+    items: [
+      "Domestic Distribution",
+      "Cross-Border Transport",
+      "Last Mile Delivery",
+      "Fleet Management",
+    ],
+  },
 ];
 
-const industries = ["Agriculture", "Textile", "Food Processing", "Chemicals", "Manufacturing", "FMCG"];
-
+const industries = [
+  { name: "Agriculture", icon: Sprout },
+  { name: "Textile", icon: Shirt },
+  { name: "Food Processing", icon: Wheat },
+  { name: "Chemicals", icon: FlaskConical },
+  { name: "Manufacturing", icon: Factory },
+  { name: "FMCG", icon: ShoppingBag },
+];
 const process = [
   { title: "Booking", desc: "Vessel/flight booking with best-rate routing." },
   { title: "Documentation", desc: "BL, invoice, packing list and certificates." },
@@ -51,44 +112,151 @@ export default function Logistics() {
       heroDescription="ORCEA Logistics Solutions offers comprehensive freight forwarding, customs clearance, warehousing and supply chain solutions for businesses involved in international trade."
     >
       <Section>
-        <SectionHeading eyebrow="Services Grid" title="End-to-end logistics under one roof." center />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {serviceGroups.map((g) => (
-            <div key={g.title} className="rounded-2xl border border-border bg-card p-7 shadow-soft transition hover:shadow-elegant">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-accent/15"><g.icon className="h-6 w-6 text-accent-foreground" /></div>
-              <h3 className="mt-5 font-display text-xl font-bold text-primary">{g.title}</h3>
-              <ul className="mt-4 grid gap-2">
-                {g.items.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-accent shrink-0" /> {it}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Section>
+  <SectionHeading
+    eyebrow="Logistics Services"
+    title="End-to-end logistics under one roof."
+    center
+  />
 
-      <Section surface>
-        <SectionHeading eyebrow="Logistics Network" title="Global hubs, local expertise." center />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {network.map((n) => (
-            <div key={n} className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 shadow-soft">
-              <Globe2 className="h-5 w-5 text-secondary" />
-              <span className="font-semibold text-primary">{n}</span>
-            </div>
-          ))}
-        </div>
-      </Section>
+  <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+    {serviceGroups.map((service, index) => (
+      <div
+        key={service.title}
+        className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-soft transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:shadow-elegant"
+      >
+        {/* Background Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-secondary/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-      <Section>
-        <SectionHeading eyebrow="Industries Served" title="Trusted across sectors." center />
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {industries.map((i) => (
-            <span key={i} className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-primary shadow-soft">{i}</span>
-          ))}
+        {/* Service Number */}
+        <div className="absolute right-6 top-6 text-5xl font-black text-primary/5">
+          {String(index + 1).padStart(2, "0")}
         </div>
-      </Section>
+
+        {/* Icon */}
+        <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/10 transition-all duration-300 group-hover:bg-accent">
+          <service.icon className="h-8 w-8 text-accent-foreground group-hover:text-primary" />
+        </div>
+
+        {/* Title */}
+        <h3 className="relative z-10 mt-6 font-display text-2xl font-bold text-primary">
+          {service.title}
+        </h3>
+
+        <p className="relative z-10 mt-2 text-sm text-muted-foreground">
+          Professional logistics solutions tailored for global trade.
+        </p>
+
+        {/* Services */}
+        <ul className="relative z-10 mt-6 space-y-3">
+          {service.items.map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-3 text-sm text-foreground/80"
+            >
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        {/* Footer */}
+        <div className="relative z-10 mt-6 flex items-center justify-between border-t border-border pt-5">
+          <span className="text-xs font-semibold uppercase tracking-wider text-secondary">
+            {service.items.length} Services
+          </span>
+
+          {/* <span className="text-sm font-semibold text-accent">
+            Learn More →
+          </span> */}
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
+
+     <Section surface>
+  <SectionHeading
+    eyebrow="Global Logistics Network"
+    title="Global hubs, local expertise."
+    center
+  />
+
+  <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+    {network.map((location, index) => (
+      <div
+        key={location}
+        className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-soft transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:shadow-elegant"
+      >
+        {/* Hover Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-secondary/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+        {/* Number */}
+        <div className="absolute right-5 top-4 text-5xl font-black text-primary/5">
+          {String(index + 1).padStart(2, "0")}
+        </div>
+
+        {/* Icon */}
+        <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5">
+          <Globe2 className="h-8 w-8 text-accent" />
+        </div>
+
+        {/* Location */}
+        <h3 className="relative z-10 mt-6 font-display text-xl font-bold text-primary">
+          {location}
+        </h3>
+
+        <p className="relative z-10 mt-2 text-sm text-muted-foreground">
+          Strategic logistics hub connecting international trade routes.
+        </p>
+
+        {/* Bottom Line */}
+        <div className="relative z-10 mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-accent to-secondary" />
+      </div>
+    ))}
+  </div>
+</Section>
+
+   <Section>
+  <SectionHeading
+    eyebrow="Industries Served"
+    title="Trusted across sectors."
+    center
+  />
+
+  <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {industries.map((industry, index) => (
+      <div
+        key={industry.name}
+        className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 shadow-soft transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:shadow-elegant"
+      >
+        {/* Background Glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-secondary/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+        {/* Number */}
+        <div className="absolute right-5 top-4 text-5xl font-black text-primary/5">
+          {String(index + 1).padStart(2, "0")}
+        </div>
+
+        {/* Icon Circle */}
+        <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent/10">
+          <industry.icon className="h-8 w-8 text-accent" />
+        </div>
+
+        {/* Industry Name */}
+        <h3 className="relative z-10 mt-6 font-display text-xl font-bold text-primary">
+          {industry.name}
+        </h3>
+
+        <p className="relative z-10 mt-2 text-sm text-muted-foreground">
+          Specialized market expertise and international business support.
+        </p>
+
+        {/* Bottom Accent */}
+        <div className="relative z-10 mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-accent to-secondary" />
+      </div>
+    ))}
+  </div>
+</Section>
 
       <Section surface>
         <SectionHeading eyebrow="Process Timeline" title="From booking to delivery." center />
@@ -116,14 +284,14 @@ export default function Logistics() {
         </div>
       </Section>
 
-      <Section surface>
+      {/* <Section surface>
         <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 shadow-soft md:p-12">
           <SectionHeading eyebrow="Contact Form" title="Request a shipping quote." center />
           <div className="mt-8">
             <InquiryForm subject="Logistics Quote Request" fields={["name", "company", "email", "phone", "message"]} />
           </div>
         </div>
-      </Section>
+      </Section> */}
     </DivisionLayout>
   );
 }

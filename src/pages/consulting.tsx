@@ -1,7 +1,7 @@
 import { DivisionLayout } from "../components/DivisionLayout";
 import { Section, SectionHeading } from "../components/Section";
 import { InquiryForm } from "../components/InquiryForm";
-import { Briefcase, Compass, Globe2, ShieldCheck, Rocket, CheckCircle2, Quote, ChevronDown } from "lucide-react";
+import { Briefcase, Compass, Globe2, ShieldCheck, Rocket, CheckCircle2, Quote, ChevronDown, Handshake } from "lucide-react";
 
 // export const Route = createFileRoute("/consulting")({
 //   head: () => ({
@@ -17,13 +17,88 @@ import { Briefcase, Compass, Globe2, ShieldCheck, Rocket, CheckCircle2, Quote, C
 //   component: Consulting,
 // });
 
+
 const serviceGroups = [
-  { icon: Briefcase, title: "Export Business Setup", items: ["Business Registration Guidance", "IEC Assistance", "APEDA Guidance", "Product Selection", "Market Selection"] },
-  { icon: Compass, title: "Market Entry Strategy", items: ["International Expansion Planning", "Country Analysis", "Distribution Network Planning", "Go-To-Market Strategy"] },
-  { icon: Globe2, title: "International Business Consulting", items: ["Business Model Development", "Growth Planning", "Partnership Development", "Joint Venture Consulting"] },
-  { icon: ShieldCheck, title: "Compliance & Documentation", items: ["Export Regulations", "Product Certifications", "Compliance Framework", "Risk Assessment"] },
-  { icon: Rocket, title: "Business Transformation", items: ["Process Optimization", "Operational Excellence", "Growth Strategy", "Digital Transformation"] },
+  {
+    icon: Briefcase,
+    number: "01",
+    title: "Export Business Setup",
+    desc: "Everything you need to go from idea to first shipment — licences, codes, and product-market fit.",
+    items: [
+      "Business Registration Guidance",
+      "IEC (Importer-Exporter Code) Assistance",
+      "APEDA / DGFT Enrollment",
+      "Product & HS Code Classification",
+      "Target Market Selection",
+    ],
+  },
+  {
+    icon: Compass,
+    number: "02",
+    title: "Market Entry Strategy",
+    desc: "Enter new international markets with a data-backed plan — not guesswork.",
+    items: [
+      "International Expansion Planning",
+      "Country & Competitor Analysis",
+      "Distribution Network Planning",
+      "Go-To-Market Strategy",
+      "Pilot Programme Design",
+    ],
+  },
+  {
+    icon: Globe2,
+    number: "03",
+    title: "International Business Consulting",
+    desc: "Build scalable cross-border operations and unlock new revenue streams globally.",
+    items: [
+      "Global Business Model Development",
+      "Multi-Country Growth Planning",
+      "Partnership & Buyer Development",
+      "Joint Venture Consulting",
+      "Trade Finance Advisory",
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    number: "04",
+    title: "Compliance & Documentation",
+    desc: "Stay export-ready and legally compliant in every market you enter.",
+    items: [
+      "Export Regulations & Customs",
+      "Product Certifications (CE, FDA, BIS)",
+      "Compliance Framework Design",
+      "Risk Assessment & Mitigation",
+      "LC & Documentation Advisory",
+    ],
+  },
+  {
+    icon: Rocket,
+    number: "05",
+    title: "Business Transformation",
+    desc: "Optimise your operations and capabilities to perform at an international scale.",
+    items: [
+      "Export Process Audit & Optimisation",
+      "Operational Excellence",
+      "Digital Transformation",
+      "Growth Strategy Execution",
+      "Team Capability Building",
+    ],
+  },
+  {
+    icon: Handshake,
+    number: "06",
+    title: "Partnership & Distribution",
+    desc: "Connect with the right buyers, agents, and distributors in your target markets.",
+    items: [
+      "Buyer & Importer Identification",
+      "Agent & Distributor Matchmaking",
+      "Negotiation Support",
+      "MOU & Agreement Drafting",
+      "Long-Term Relationship Management",
+    ],
+  },
 ];
+
 
 const industries = ["Agri & Food", "Textile", "Chemicals", "Engineering", "Pharma", "FMCG", "Manufacturing", "Services"];
 
@@ -56,32 +131,84 @@ export default function Consulting() {
       heroDescription="ORCEA Global Consulting delivers end-to-end advisory for businesses expanding internationally — from market entry to operational transformation."
     >
       <Section>
-        <SectionHeading eyebrow="Consulting Services" title="Strategy across the growth journey." center />
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {serviceGroups.map((g) => (
-            <div key={g.title} className="rounded-2xl border border-border bg-card p-7 shadow-soft transition hover:shadow-elegant">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-accent/15"><g.icon className="h-6 w-6 text-accent-foreground" /></div>
-              <h3 className="mt-5 font-display text-xl font-bold text-primary">{g.title}</h3>
-              <ul className="mt-4 grid gap-2">
-                {g.items.map((it) => (
-                  <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-accent shrink-0" /> {it}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Section>
+           <SectionHeading
+             eyebrow="Consulting Services"
+             title="Strategy across the entire growth journey."
+             center
+           />
+     
+           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+             {serviceGroups.map((g) => (
+               <div
+                 key={g.title}
+                 className="group relative rounded-2xl border border-border bg-card p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant overflow-hidden"
+               >
+                 {/* Gold top-border reveal on hover */}
+                 <div className="absolute inset-x-0 top-0 h-0.5 bg-accent scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+     
+                 {/* Number + Icon row */}
+                 <div className="flex items-start justify-between mb-5">
+                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-accent/10 transition-colors duration-300 group-hover:bg-accent/20">
+                     <g.icon className="h-6 w-6 text-accent" />
+                   </div>
+                   <span className="font-display text-3xl font-extrabold text-border/70 tabular-nums select-none transition-colors duration-300 group-hover:text-accent/30">
+                     {g.number}
+                   </span>
+                 </div>
+     
+                 {/* Title */}
+                 <h3 className="font-display text-lg font-bold text-primary leading-snug mb-2">
+                   {g.title}
+                 </h3>
+     
+                 {/* Description */}
+                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                   {g.desc}
+                 </p>
+     
+                 {/* Divider */}
+                 <div className="h-px bg-border mb-5" />
+     
+                 {/* Items */}
+                 <ul className="grid gap-2">
+                   {g.items.map((it) => (
+                     <li key={it} className="flex items-start gap-2.5 text-sm text-foreground/80">
+                       <CheckCircle2 className="mt-0.5 h-4 w-4 text-accent shrink-0" />
+                       {it}
+                     </li>
+                   ))}
+                 </ul>
+               </div>
+             ))}
+           </div>
+         </Section>
 
-      <Section surface>
-        <SectionHeading eyebrow="Industries" title="Sector expertise that compounds." center />
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {industries.map((i) => (
-            <span key={i} className="rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold text-primary shadow-soft">{i}</span>
-          ))}
-        </div>
-      </Section>
+    <Section surface>
+  <SectionHeading
+    eyebrow="Industries"
+    title="Sector expertise that compounds."
+    center
+  />
+
+  <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+    {industries.map((industry, index) => (
+      <div
+        key={industry}
+        className="group rounded-3xl border border-border bg-card p-8 text-center shadow-soft transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-elegant"
+      >
+        {/* <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-accent font-bold text-xl">
+          {String(index + 1).padStart(2, "0")}
+        </div> */}
+
+        <h3 className="font-display text-lg font-bold text-primary">
+          {industry}
+        </h3>
+
+        <div className="mt-4 h-1 w-12 mx-auto rounded-full bg-accent opacity-60" />
+      </div>
+    ))}
+  </div>
+</Section>
 
       <Section>
         <SectionHeading eyebrow="Consulting Process" title="A proven five-step methodology." center />
@@ -124,14 +251,14 @@ export default function Consulting() {
         </div>
       </Section>
 
-      <Section surface>
+      {/* <Section surface>
         <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 shadow-soft md:p-12">
           <SectionHeading eyebrow="Contact Form" title="Book a strategy session." center />
           <div className="mt-8">
             <InquiryForm subject="Consulting Inquiry" fields={["name", "company", "email", "phone", "message"]} />
           </div>
         </div>
-      </Section>
+      </Section> */}
     </DivisionLayout>
   );
 }

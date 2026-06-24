@@ -11,6 +11,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Divisions from "./pages/divisions";
 import Academy from "./pages/academy";
+import TradeIntel from "./pages/trade-intelligence";
 import Consulting from "./pages/consulting";
 import Digital from "./pages/digital";
 import Logistics from "./pages/logistics";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/divisions" element={<Divisions />} />
 
         <Route path="/academy" element={<Academy />} />
+        <Route path="/trade-intelligence" element={<TradeIntel />} />
         <Route path="/consulting" element={<Consulting />} />
         <Route path="/digital" element={<Digital />} />
         <Route path="/logistics" element={<Logistics />} />
