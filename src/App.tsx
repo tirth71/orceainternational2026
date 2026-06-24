@@ -16,6 +16,7 @@ import Digital from "./pages/digital";
 import Logistics from "./pages/logistics";
 import Exports from "./pages/exports";
 import ScrollToTop from './components/ScrollToTop';
+import TradeIntelligence from "./pages/tradeIntelligence";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/digital" element={<Digital />} />
         <Route path="/logistics" element={<Logistics />} />
         <Route path="/exports" element={<Exports />} />
+        <Route path="/tradeintelligence" element={<TradeIntelligence />} />
       </Routes>
 
       <Footer />
