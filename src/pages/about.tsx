@@ -3,21 +3,8 @@ import { Eye, Target, Heart, Sparkles, TrendingUp, ShieldCheck, Users, ArrowRigh
 import { PageHero, Section, SectionHeading } from "@/components/Section";
 import { motion } from "framer-motion";
 import founderImg from "@/assets/ISO.png";
+import { useEffect } from "react";
 
-
-// export const Route = createFileRoute("/about")({
-//   head: () => ({
-//     meta: [
-//       { title: "About — ORCEA Group" },
-//       { name: "description", content: "ORCEA Group is a multi-division business ecosystem operating in international trade, education, consulting, logistics and digital marketing." },
-//       { property: "og:title", content: "About — ORCEA Group" },
-//       { property: "og:description", content: "Vision, mission and leadership behind ORCEA Group's global ecosystem." },
-//       { property: "og:url", content: "/about" },
-//     ],
-//     links: [{ rel: "canonical", href: "/about" }],
-//   }),
-//   component: About,
-// });
 
 const values = [
   { icon: ShieldCheck, label: "Integrity",     desc: "Honest, transparent dealings across every engagement." },
@@ -33,15 +20,6 @@ const team = [
   { name: "Head of Academy",role: "Director, Education",   bio: "Leading curriculum design and mentorship across cohorts." },
   { name: "Head of Logistics",role:"Director, Logistics",  bio: "Cross-border supply chain expert across 40+ countries." },
   { name: "Head of Consulting",role:"Director, Consulting",bio: "Market entry strategist for SMEs and enterprises." },
-];
-
-const milestones = [
-  { year: "2008", title: "Career Begins",        desc: "Mr. Manoj Vyas starts his journey in Export-Import & Logistics." },
-  { year: "2012", title: "First Major Milestone",desc: "Managed ₹400 Cr logistics operations & 5000+ container shipments." },
-  { year: "2017", title: "Academy Founded",      desc: "Yashraj Exim Academy launched to train the next generation of exporters." },
-  { year: "2020", title: "ORCEA Group Formed",   desc: "Six divisions unified under one global brand." },
-  { year: "2022", title: "Global Expansion",     desc: "Active operations in 30+ countries across 5 continents." },
-  { year: "2024", title: "1000+ Students",       desc: "Over 1000 professionals trained and placed in the EXIM industry." },
 ];
 
 const divisions = [
@@ -63,6 +41,9 @@ const achievements = [
 ];
 
 export default function About() {
+   useEffect(() => {
+    document.title = "About | ORCEA International";
+  }, []);
   return (
     <>
       <PageHero

@@ -2,6 +2,7 @@ import { DivisionLayout } from "../components/DivisionLayout";
 import { Section, SectionHeading } from "../components/Section";
 import { InquiryForm } from "../components/InquiryForm";
 import { Globe, Search, Megaphone, Share2, Palette, Target, TrendingUp, CheckCircle2, Quote, ChevronDown } from "lucide-react";
+import { useEffect } from "react";
 
 // export const Route = createFileRoute("/digital")({
 //   head: () => ({
@@ -77,6 +78,9 @@ const faqs = [
 ];
 
 export default function Digital() {
+   useEffect(() => {
+      document.title = "Digital Marketing | ORCEA International";
+    }, []);
   return (
     <DivisionLayout
       slug="digital"

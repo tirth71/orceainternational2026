@@ -2,6 +2,7 @@ import { DivisionLayout } from "../components/DivisionLayout";
 import { Section, SectionHeading } from "../components/Section";
 import { InquiryForm } from "../components/InquiryForm";
 import { Briefcase, Compass, Globe2, ShieldCheck, Rocket, CheckCircle2, Quote, ChevronDown, Handshake } from "lucide-react";
+import { useEffect } from "react";
 
 // export const Route = createFileRoute("/consulting")({
 //   head: () => ({
@@ -124,6 +125,9 @@ const faqs = [
 ];
 
 export default function Consulting() {
+   useEffect(() => {
+      document.title = "Consulting | ORCEA International";
+    }, []);
   return (
     <DivisionLayout
       slug="consulting"

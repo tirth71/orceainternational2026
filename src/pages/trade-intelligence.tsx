@@ -9,6 +9,7 @@ import {
   Database, ShieldCheck, Zap, Award, ArrowRight, MapPin,
   Package, Building2, Layers, Star,
 } from "lucide-react";
+import { useEffect } from "react";
 
 const serviceGroups = [
   {
@@ -182,6 +183,9 @@ const stats = [
 ];
 
 export default function TradeIntel() {
+   useEffect(() => {
+      document.title = "Trade Intelligence | ORCEA International";
+    }, []);
   return (
     <DivisionLayout
       slug="trade-intelligence"

@@ -464,8 +464,8 @@ const learningPaths = [
   {
     type: "Online Course",
     desc: "Learn from anywhere with an internet connection",
-    price: "₹10,000",
-    original: "₹15,000",
+    price: "₹10,500",
+    original: "₹15,500",
     cta: "Start Online Learning",
     color: "border-accent",
     badge: "Most Popular",
