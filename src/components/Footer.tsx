@@ -29,7 +29,7 @@ export default function Footer() {
       <div className="border-b border-white/10 py-4 overflow-hidden">
         <div
           className="flex whitespace-nowrap"
-          style={{ animation: "footerMarquee 28s linear infinite" }}
+          style={{ animation: "footerMarquee 11s linear infinite" }}
         >
           {[...marqueeIcons, ...marqueeIcons].map((item, i) => (
             <div
