@@ -378,8 +378,8 @@ export default function About() {
                     bg: "bg-green-100",
                     color: "text-green-600",
                     label: "Call Us",
-                    value: "+91 98765 43210",
-                    href: "tel:+919876543210",
+                    value: "+91 79841 82299",
+                    href: "tel:+917984182299",
                   },
                   {
                     icon: (

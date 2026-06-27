@@ -110,7 +110,7 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Get in touch</div>
             <ul className="mt-5 space-y-3 text-sm text-primary-foreground/80">
-              <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>+91 00000 00000</span></li>
+              <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>+91 79841 82299</span></li>
               <li className="flex gap-3"><Mail  className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>info@orceainternational.com</span></li>
               <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>Rajkot, India</span></li>
             </ul>
