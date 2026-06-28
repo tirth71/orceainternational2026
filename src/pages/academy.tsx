@@ -363,7 +363,7 @@ export default function Academy() {
   return (
     <>
       {/* HERO with background image */}
-      <section className="relative isolate overflow-hidden text-primary-foreground">
+      <section className="mt-10 relative isolate overflow-hidden text-primary-foreground">
         <img
           src={academyHero}
           alt="ORCEA International Academy classroom"

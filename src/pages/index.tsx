@@ -39,7 +39,7 @@ export default function Home() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+    <section className="mt-10 relative overflow-hidden min-h-[90vh] flex items-center">
   {/* Background Image */}
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
