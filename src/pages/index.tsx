@@ -44,7 +44,20 @@ function Hero() {
   <div
     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80')",
+      backgroundImage: // Option 1 — Business meeting (current recommendation)
+
+       "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80')",
+
+
+       
+// "url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80')"
+
+// "url('https://images.unsplash.com/photo-1494412685616-a5d310fbb07d?auto=format&fit=crop&w=1920&q=80')"
+
+// "url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1920&q=80')"
+
+
+// "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80')",
     }}
   />
   <div className="absolute inset-0 bg-black/75" />
@@ -464,8 +477,8 @@ const learningPaths = [
   {
     type: "Online Course",
     desc: "Learn from anywhere with an internet connection",
-    price: "₹10,000",
-    original: "₹15,000",
+    price: "₹10,500",
+    original: "₹15,500",
     cta: "Start Online Learning",
     color: "border-accent",
     badge: "Most Popular",

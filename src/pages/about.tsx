@@ -3,21 +3,8 @@ import { Eye, Target, Heart, Sparkles, TrendingUp, ShieldCheck, Users, ArrowRigh
 import { PageHero, Section, SectionHeading } from "@/components/Section";
 import { motion } from "framer-motion";
 import founderImg from "@/assets/ISO.png";
+import { useEffect } from "react";
 
-
-// export const Route = createFileRoute("/about")({
-//   head: () => ({
-//     meta: [
-//       { title: "About — ORCEA Group" },
-//       { name: "description", content: "ORCEA Group is a multi-division business ecosystem operating in international trade, education, consulting, logistics and digital marketing." },
-//       { property: "og:title", content: "About — ORCEA Group" },
-//       { property: "og:description", content: "Vision, mission and leadership behind ORCEA Group's global ecosystem." },
-//       { property: "og:url", content: "/about" },
-//     ],
-//     links: [{ rel: "canonical", href: "/about" }],
-//   }),
-//   component: About,
-// });
 
 const values = [
   { icon: ShieldCheck, label: "Integrity",     desc: "Honest, transparent dealings across every engagement." },
@@ -33,15 +20,6 @@ const team = [
   { name: "Head of Academy",role: "Director, Education",   bio: "Leading curriculum design and mentorship across cohorts." },
   { name: "Head of Logistics",role:"Director, Logistics",  bio: "Cross-border supply chain expert across 40+ countries." },
   { name: "Head of Consulting",role:"Director, Consulting",bio: "Market entry strategist for SMEs and enterprises." },
-];
-
-const milestones = [
-  { year: "2008", title: "Career Begins",        desc: "Mr. Manoj Vyas starts his journey in Export-Import & Logistics." },
-  { year: "2012", title: "First Major Milestone",desc: "Managed ₹400 Cr logistics operations & 5000+ container shipments." },
-  { year: "2017", title: "Academy Founded",      desc: "Yashraj Exim Academy launched to train the next generation of exporters." },
-  { year: "2020", title: "ORCEA Group Formed",   desc: "Six divisions unified under one global brand." },
-  { year: "2022", title: "Global Expansion",     desc: "Active operations in 30+ countries across 5 continents." },
-  { year: "2024", title: "1000+ Students",       desc: "Over 1000 professionals trained and placed in the EXIM industry." },
 ];
 
 const divisions = [
@@ -63,6 +41,9 @@ const achievements = [
 ];
 
 export default function About() {
+   useEffect(() => {
+    document.title = "About | ORCEA International";
+  }, []);
   return (
     <>
       <PageHero
@@ -386,24 +367,77 @@ export default function About() {
               </Link>
             </div>
           </div>
-          <div className="space-y-4">
-            {[
-              { icon: Phone,  label: "Call Us",       value: "+91 98765 43210"          },
-              { icon: Mail,   label: "Email Us",      value: "info@orceagroup.com"      },
-              { icon: MapPin, label: "Headquarters",  value: "Surat, Gujarat, India"    },
-              { icon: Globe2, label: "Global Offices",value: "UAE · UK · USA · Malaysia" },
-            ].map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-4">
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/10">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">{label}</p>
-                  <p className="text-sm font-semibold text-foreground">{value}</p>
-                </div>
+                      <div className="space-y-4">
+                {[
+                  {
+                    icon: (
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.18 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/>
+                      </svg>
+                    ),
+                    bg: "bg-green-100",
+                    color: "text-green-600",
+                    label: "Call Us",
+                    value: "+91 79841 82299",
+                    href: "tel:+917984182299",
+                  },
+                  {
+                    icon: (
+                      /* Gmail-style envelope */
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                        <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                      </svg>
+                    ),
+                    bg: "bg-red-100",
+                    color: "text-red-500",
+                    label: "Email Us",
+                    value: "info@orceagroup.com",
+                    href: "mailto:info@orceagroup.com",
+                  },
+                  {
+                    icon: (
+                      /* Map pin */
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                    ),
+                    bg: "bg-blue-100",
+                    color: "text-blue-600",
+                    label: "Headquarters",
+                    value: "Rajkot, Gujarat, India",
+                    href: "https://maps.google.com/?q=Rajkot,Gujarat,India",
+                  },
+                  {
+                    icon: (
+                      /* Globe */
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                      </svg>
+                    ),
+                    bg: "bg-purple-100",
+                    color: "text-purple-600",
+                    label: "Global Offices",
+                    value: "UAE · UK · USA · Malaysia",
+                    href: "#",
+                  },
+                ].map(({ icon, bg, color, label, value, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-4 hover:shadow-soft hover:border-primary/20 transition-all group"
+                  >
+                    <div className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl ${bg} ${color} group-hover:scale-110 transition-transform`}>
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider">{label}</p>
+                      <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{value}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
-            ))}
-          </div>
         </div>
       </Section>
     </>

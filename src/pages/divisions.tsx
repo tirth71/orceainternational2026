@@ -12,6 +12,7 @@ import {
 
 import { divisions } from "../data/divisions";
 import { PageHero, Section } from "../components/Section";
+import { useEffect } from "react";
 
 const iconMap = {
   GraduationCap,
@@ -23,6 +24,9 @@ const iconMap = {
 };
 
 export default function DivisionsPage() {
+   useEffect(() => {
+      document.title = "Divisions | ORCEA International";
+    }, []);
   return (
     <>
       <PageHero

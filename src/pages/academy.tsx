@@ -31,14 +31,15 @@ import academyHero from "@/assets/academy-hero.jpg";
      import { CheckCircle, Calendar, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 
 const learningPaths = [
   {
     type: "Online Course",
     desc: "Learn from anywhere with an internet connection",
-    price: "₹10,000",
-    original: "₹15,000",
+    price: "₹10,500",
+    original: "₹15,500",
     cta: "Start Online Learning",
     color: "border-accent",
     badge: "Most Popular",
@@ -356,6 +357,9 @@ const faqs = [
 ];
 
 export default function Academy() {
+   useEffect(() => {
+      document.title = "Academy | ORCEA International";
+    }, []);
   return (
     <>
       {/* HERO with background image */}

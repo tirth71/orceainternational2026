@@ -3,6 +3,7 @@ import { DivisionLayout } from "@/components/DivisionLayout";
 import { Section, SectionHeading } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Ship, Plane, FileCheck2, Warehouse, Network, CheckCircle2, Quote, Globe2, Truck, Building2, Factory, FlaskConical, Shirt, ShoppingBag, Sprout, Wheat } from "lucide-react";
+import { useEffect } from "react";
 
 // export const Route = createFileRoute("/logistics")({
 //   head: () => ({
@@ -105,6 +106,9 @@ const testimonials = [
 ];
 
 export default function Logistics() {
+   useEffect(() => {
+      document.title = "Logistics | ORCEA International";
+    }, []);
   return (
     <DivisionLayout
       slug="logistics"
