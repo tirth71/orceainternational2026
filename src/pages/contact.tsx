@@ -2,6 +2,7 @@
 import { PageHero, Section } from "@/components/Section";
 import { InquiryForm } from "@/components/InquiryForm";
 import { Phone, Mail, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
 
 const info = [
   { icon: Phone, label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000" },
@@ -56,6 +57,10 @@ const stats = [
 
 
 export default function Contact() {
+  useEffect(() => {
+        document.title = "Contact | ORCEA International";
+      }, []);
+      
   return (
     <>
       <PageHero

@@ -16,11 +16,16 @@ import apeda from "../assets/apeda.png";
 import usda from "../assets/USDA_logo.png";
 import msme from "../assets/msme.png";
 import spiceBoard from "../assets/Spices_Board_of_India_Logo.png";
+import { useEffect } from "react";
 
 const iconMap = { GraduationCap, BarChart3, Briefcase, Ship, Megaphone, Wheat };
 const certificates = [iso, fssai, apeda, usda, msme, spiceBoard];
 
 export default function Home() {
+    useEffect(() => {
+          document.title = "Home | ORCEA International";
+        }, []);
+        
   return (
     <>
       <Hero />
