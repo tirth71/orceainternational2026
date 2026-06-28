@@ -5,6 +5,7 @@ import {
   BookOpen, FileText, Award, Clock, Users, TrendingUp,
 } from "lucide-react";
 import { divisions } from "../data/divisions";
+import logoFull from "../assets/logo/orcea-logo.jpeg";
 
 const marqueeIcons = [
   { icon: Ship,          label: "Global Trade"       },
@@ -65,9 +66,8 @@ export default function Footer() {
               <div className="grid h-10 w-10 place-items-center rounded-lg bg-white/10">
                 <Globe className="h-5 w-5 text-accent" />
               </div>
-              <div className="leading-tight">
-                <div className="font-display text-lg font-extrabold">ORCEA</div>
-                <div className="text-[10px] uppercase tracking-[0.18em] text-primary-foreground/60">Group</div>
+              <div className="leading-tight h-[10vh] w-[10vw]">
+                <img src={logoFull} />
               </div>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
