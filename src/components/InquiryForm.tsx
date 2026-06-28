@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Send, CheckCircle2 } from "lucide-react";
 
-export function InquiryForm({ subject = "Inquiry", fields = ["name", "email", "phone", "message"] as const }: { subject?: string; fields?: readonly ("name" | "email" | "phone" | "company" | "message")[] }) {
+export function InquiryForm({ subject = "Inquiry", fields = ["name", "email", "phone", "message"] as const }: { subject?: string; fields?: readonly ("name" | "email" | "phone" | "company" | "service" | "message")[] }) {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -58,6 +58,75 @@ export function InquiryForm({ subject = "Inquiry", fields = ["name", "email", "p
             <input name="company" className={input} placeholder="Company name" />
           </div>
         )}
+
+        {fields.includes("service") && (
+  <div>
+    <label className={label}>Service Required</label>
+
+    <select
+      required
+      name="service"
+      className={input}
+      defaultValue=""
+    >
+      <option value="" disabled>
+        Select a Service
+      </option>
+
+      <option value="Export Consultation">
+        Export Consultation
+      </option>
+
+      <option value="Import Consultation">
+        Import Consultation
+      </option>
+
+      <option value="International Buyer Search">
+        International Buyer Search
+      </option>
+
+      <option value="International Supplier Search">
+        International Supplier Search
+      </option>
+
+      <option value="Trade Intelligence">
+        Trade Intelligence
+      </option>
+
+      <option value="Market Research">
+        Market Research
+      </option>
+
+      <option value="Import Export Documentation">
+        Import Export Documentation
+      </option>
+
+      <option value="Customs & Compliance">
+        Customs & Compliance
+      </option>
+
+      <option value="Logistics & Freight Forwarding">
+        Logistics & Freight Forwarding
+      </option>
+
+      <option value="Business Consulting">
+        Business Consulting
+      </option>
+
+      <option value="Digital Marketing">
+        Digital Marketing
+      </option>
+
+      <option value="Professional Training">
+        Professional Training
+      </option>
+
+      <option value="General Inquiry">
+        General Inquiry
+      </option>
+    </select>
+  </div>
+)}
       </div>
       {fields.includes("message") && (
         <div>
