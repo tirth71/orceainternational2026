@@ -64,7 +64,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-2.5">
               
-              <div className="leading-tight h-[10vh] w-[10vw]">
+              <div className="leading-tight h-[11vh] w-[12vw]">
                 <img src={logoFull} />
               </div>
             </Link>
