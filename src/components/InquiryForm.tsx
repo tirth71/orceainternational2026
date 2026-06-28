@@ -73,56 +73,28 @@ export function InquiryForm({ subject = "Inquiry", fields = ["name", "email", "p
         Select a Service
       </option>
 
-      <option value="Export Consultation">
-        Export Consultation
-      </option>
-
-      <option value="Import Consultation">
-        Import Consultation
-      </option>
-
-      <option value="International Buyer Search">
-        International Buyer Search
-      </option>
-
-      <option value="International Supplier Search">
-        International Supplier Search
+      <option value="Academy & Training Programs">
+        Academy & Training Programs
       </option>
 
       <option value="Trade Intelligence">
         Trade Intelligence
       </option>
 
-      <option value="Market Research">
-        Market Research
+      <option value="Global Consulting">
+        Global Consulting
       </option>
 
-      <option value="Import Export Documentation">
-        Import Export Documentation
+      <option value="Logistics Solutions">
+        Logistics Solutions
       </option>
 
-      <option value="Customs & Compliance">
-        Customs & Compliance
+      <option value="Digital Markting">
+        Digital Markting
       </option>
 
-      <option value="Logistics & Freight Forwarding">
-        Logistics & Freight Forwarding
-      </option>
-
-      <option value="Business Consulting">
-        Business Consulting
-      </option>
-
-      <option value="Digital Marketing">
-        Digital Marketing
-      </option>
-
-      <option value="Professional Training">
-        Professional Training
-      </option>
-
-      <option value="General Inquiry">
-        General Inquiry
+      <option value="Import Export Division">
+        Import Export Division
       </option>
     </select>
   </div>
