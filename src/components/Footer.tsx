@@ -63,9 +63,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="lg:col-span-4">
             <Link to="/" className="flex items-center gap-2.5">
-              <div className="grid h-10 w-10 place-items-center rounded-lg bg-white/10">
-                <Globe className="h-5 w-5 text-accent" />
-              </div>
+              
               <div className="leading-tight h-[10vh] w-[10vw]">
                 <img src={logoFull} />
               </div>
