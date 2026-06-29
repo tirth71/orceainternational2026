@@ -65,7 +65,7 @@ export default function Footer() {
               <img
                 src={logoFull}
                 alt="ORCEA International"
-                className="h-26 w-auto object-contain"
+                className="h-28 w-auto object-contain"
               />
             </Link>
             <p className="mt-1 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
@@ -161,8 +161,6 @@ export default function Footer() {
 
         </div>
 
-
-        
 
         {/* ── Bottom Bar ── */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-primary-foreground/60 sm:flex-row">
