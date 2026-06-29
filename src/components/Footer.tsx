@@ -5,7 +5,7 @@ import {
   BookOpen, FileText, Award, Clock, Users, TrendingUp,
 } from "lucide-react";
 import { divisions } from "../data/divisions";
-import logoFull from "../assets/logo/orcea---removebg-preview.png";
+import logoFull from "../assets/logo/orcea-logo-removebg-preview(1).png";
 
 const marqueeIcons = [
   { icon: Ship,          label: "Global Trade"       },

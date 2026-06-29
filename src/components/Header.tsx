@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { divisions } from "../data/divisions";
-import logoFull from "../assets/logo//orcea---removebg-preview.png";
+import logoFull from "../assets/logo/orcea-logo-removebg-preview(1).png";
 
 const nav = [
   { to: "/",          label: "Home"     },
@@ -39,7 +39,7 @@ export default function Header() {
           <img
             src={logoFull}
             alt="ORCEA International"
-            className="h-16 w-auto object-contain"
+            className="h-18 w-auto object-contain"
           />
         </Link>
 
