@@ -152,13 +152,13 @@ export default function Header() {
         <div className="border-t border-border bg-white lg:hidden shadow-lg">
           <div className="container-x mx-auto flex max-w-7xl flex-col gap-1 px-6 py-5">
 
-            <div className="mb-4 pb-3 border-b border-border">
+            {/* <div className="mb-4 pb-3 border-b border-border">
               <img
                 src={logoFull}
                 alt="ORCEA International"
                 style={{ height: "44px", maxWidth: "140px", objectFit: "cover", objectPosition: "top center" }}
               />
-            </div>
+            </div> */}
 
             {nav.map((item) => (
               <Link
