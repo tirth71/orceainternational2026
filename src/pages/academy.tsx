@@ -25,10 +25,9 @@ import {
   ClipboardCheck,
   TrendingUp,
 } from "lucide-react";
-import { Section, SectionHeading } from "@/components/Section";
-// import { InquiryForm } from "@/components/site/InquiryForm";
+import { Section, SectionHeading } from "@/components/Section";          
 import academyHero from "@/assets/academy-hero.jpg";
-     import { CheckCircle, Calendar, Clock } from "lucide-react";
+import { CheckCircle, Calendar, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -87,29 +86,6 @@ const learningPaths = [
   },
 ];
 
-
-// export const Route = createFileRoute("/academy")({
-//   head: () => ({
-//     meta: [
-//       { title: "ORCEA International Academy — Import Export Training Institute" },
-//       {
-//         name: "description",
-//         content:
-//           "Learn import export business from industry experts. Live classes, certification, buyer-finding, documentation, logistics & global marketing training — online & offline.",
-//       },
-//       { property: "og:title", content: "ORCEA International Academy" },
-//       {
-//         property: "og:description",
-//         content:
-//           "India's premium import-export training institute. 1000+ students trained, 100+ export startups created, 25+ countries connected.",
-//       },
-//       { property: "og:image", content: academyHero },
-//       { property: "og:url", content: "/academy" },
-//     ],
-//     links: [{ rel: "canonical", href: "/academy" }],
-//   }),
-//   component: Academy,
-// });
 
 const stats = [
   { value: "1000+", label: "Students Trained" },
@@ -220,26 +196,6 @@ const testimonials = [
   },
 ];
 
-// const careers = [
-//   "Export Executive",
-//   "Import Executive",
-//   "Documentation Executive",
-//   "Logistics Coordinator",
-//   "Supply Chain Executive",
-//   "International Marketing Executive",
-//   "Export Manager",
-//   "Trade Analyst",
-// ];
-
-// const resources = [
-//   "Complete Export Guide",
-//   "Export Readiness Checklist",
-//   "Documentation Templates",
-//   "Product Selection Guide",
-//   "Buyer Search Playbook",
-//   "Export Cost Calculator",
-//   "Country Market Reports",
-// ];
 const careerProfiles = [
   {
     profile: "Students & Fresh Graduates",
@@ -398,7 +354,7 @@ export default function Academy() {
               <Download className="h-4 w-4" /> Download Brochure
             </a>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/917984182299?text=Hello%20ORCEA%20Academy,%20I%20am%20interested%20in%20the%20Import-Export%20Business%20Course.%20Please%20provide%20more%20details."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-white/10"
@@ -420,10 +376,7 @@ export default function Academy() {
         </div>
       </section>
 
-
-
  {/* PROGRAMS */}
- 
 
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto max-w-5xl px-6">
