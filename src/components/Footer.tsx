@@ -5,7 +5,7 @@ import {
   BookOpen, FileText, Award, Clock, Users, TrendingUp,
 } from "lucide-react";
 import { divisions } from "../data/divisions";
-import logoFull from "../assets/logo/orcea-logo-removebg-preview(1).png";
+import logoFull from "../assets/logo/20260629_183346.png";
 
 const marqueeIcons = [
   { icon: Ship,          label: "Global Trade"       },
@@ -49,7 +49,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* keyframe */}
       <style>{`
         @keyframes footerMarquee {
           0%   { transform: translateX(0); }
@@ -57,70 +56,124 @@ export default function Footer() {
         }
       `}</style>
 
-      {/* ── Rest of your existing footer unchanged ── */}
-      <div className="container-x mx-auto max-w-7xl py-16">
-        <div className="grid gap-12 lg:grid-cols-12">
-          {/* Logo */}
+      <div className="container-x mx-auto max-w-7xl py-16 px-6">
+        <div className="grid gap-10 lg:grid-cols-12">
+
+          {/* ── Logo + About ── */}
           <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-2.5">
-              
-              <div className="leading-tight h-[9vh] w-[16vw]">
-                <img src={logoFull} />
-              </div>
+            <Link to="/" className="inline-flex items-center">
+              <img
+                src={logoFull}
+                alt="ORCEA International"
+                className="h-26 w-auto object-contain"
+              />
             </Link>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
+            <p className="mt-1 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
               Empowering global trade, education and business growth across
               continents through a unified ecosystem of premium services.
             </p>
             <div className="mt-6 flex gap-3">
               {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
-                <a key={i} href="#" aria-label="Social"
-                  className="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition hover:bg-accent hover:text-accent-foreground">
+                <a
+                  key={i}
+                  href="#"
+                  aria-label="Social"
+                  className="grid h-9 w-9 place-items-center rounded-full bg-white/5 transition hover:bg-accent hover:text-accent-foreground"
+                >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Divisions */}
+          {/* ── Divisions ── */}
           <div className="lg:col-span-3">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Divisions</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              Divisions
+            </div>
             <ul className="mt-5 space-y-2.5 text-sm">
               {divisions.map((d) => (
                 <li key={d.slug}>
-                  <Link to={d.href} className="text-primary-foreground/75 hover:text-accent">{d.short}</Link>
+                  <Link
+                    to={d.href}
+                    className="text-primary-foreground/75 hover:text-accent transition-colors"
+                  >
+                    {d.short}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company */}
+          {/* ── Company ── */}
           <div className="lg:col-span-2">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Company</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              Company
+            </div>
             <ul className="mt-5 space-y-2.5 text-sm">
-              <li><Link to="/about"     className="text-primary-foreground/75 hover:text-accent">About Us</Link></li>
-              <li><Link to="/divisions" className="text-primary-foreground/75 hover:text-accent">Services</Link></li>
-              <li><Link to="/contact"   className="text-primary-foreground/75 hover:text-accent">Contact</Link></li>
+              <li>
+                <Link to="/about" className="text-primary-foreground/75 hover:text-accent transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/divisions" className="text-primary-foreground/75 hover:text-accent transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/academy" className="text-primary-foreground/75 hover:text-accent transition-colors">
+                  Academy
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-primary-foreground/75 hover:text-accent transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* ── Contact ── */}
           <div className="lg:col-span-3">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Get in touch</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              Get in touch
+            </div>
             <ul className="mt-5 space-y-3 text-sm text-primary-foreground/80">
-              <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>+91 79841 82299</span></li>
-              <li className="flex gap-3"><Mail  className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>info@orceainternational.com</span></li>
-              <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" /><span>Rajkot, India</span></li>
+              <li className="flex gap-3">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <a href="tel:+917984182299" className="hover:text-accent transition-colors">
+                  +91 79841 82299
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <a href="mailto:info@orceainternational.com" className="hover:text-accent transition-colors">
+                  info@orceainternational.com
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <span>Rajkot, Gujarat, India</span>
+              </li>
             </ul>
           </div>
+
         </div>
 
-        {/* Bottom */}
+        {/* ── Bottom Bar ── */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-primary-foreground/60 sm:flex-row">
-          <div>© {new Date().getFullYear()} ORCEA International. All rights reserved.</div>
+          <div>
+            © {new Date().getFullYear()} ORCEA International. All rights reserved.
+          </div>
           <div className="flex items-center gap-1">
             <span>Developed by</span>
-            <a href="https://www.linkedin.com/in/tirth-savaliya-115187252" target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
+            <a
+              href="https://www.linkedin.com/in/tirth-savaliya-115187252"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 underline hover:text-accent transition-colors"
+            >
               Tirth Savaliya
             </a>
           </div>
