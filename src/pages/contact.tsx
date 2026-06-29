@@ -5,10 +5,10 @@ import { Phone, Mail, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
 import { useEffect } from "react";
 
 const info = [
-  { icon: Phone, label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000" },
-  { icon: Mail, label: "Email", value: "contact@orceagroup.com", href: "mailto:contact@orceagroup.com" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+91 00000 00000", href: "https://wa.me/910000000000" },
-  { icon: MapPin, label: "Office", value: "Global HQ — Mumbai, India", href: "#map" },
+  { icon: Phone, label: "Phone", value: "+91 79841 82299", href: "tel:+917984182299" },
+  { icon: Mail, label: "Email", value: "info@orceagroup.com", href: "mailto:info@orceagroup.com" },
+  { icon: MessageCircle, label: "WhatsApp", value: "+91 79841 82299", href: "https://wa.me/917984182299" },
+  { icon: MapPin, label: "Office", value: "Global HQ — Rajkot , India", href: "#map" },
 ];
 
 const promises = [
@@ -231,7 +231,7 @@ export default function Contact() {
             <div id="map" className="mt-6 overflow-hidden rounded-2xl border border-border">
               <iframe
                 title="ORCEA Group Office"
-                src="https://www.google.com/maps?q=Mumbai,India&output=embed"
+                src="https://www.google.com/maps?q=rajkot,India&output=embed"
                 className="h-72 w-full"
                 loading="lazy"
               />
